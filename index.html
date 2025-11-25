@@ -1,0 +1,71 @@
+<!--
+  Ethan Largo
+  IST 237 Final Project
+  Cyber Stratagem HTML
+  7/23/2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Stratagem</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="introScreen" class="intro">
+      <h1>CYBER STRATAGEM</h1>
+      <p class="intro-text">
+        Memorize the arrow sequence.<br />
+        Use arrow keys to repeat.<br />
+        Every 5 wins: +1 Reveal, +1 Length, +5s.<br />
+        Good luck!
+      </p>
+      <button id="beginBtn">Start Game</button>
+    </div>
+
+    <div id="gameField" style="display: none;">
+      <h1>CYBER STRATAGEM</h1>
+
+      <div class="display-section">
+        <p class="label">Sequence:</p>
+        <div id="sequence" class="box">[ PRESS START ]</div>
+      </div>
+
+      <div class="display-section">
+        <p class="label">Your Input:</p>
+        <div id="input" class="box"></div>
+      </div>
+
+      <div class="hud">
+        <p>Time: <span id="timer">30</span>s</p>
+        <p>Score: <span id="score">0</span></p>
+      </div>
+
+      <div class="control-buttons">
+        <button id="startBtn">Start Round</button>
+        <button id="pauseBtn">Pause Game</button>
+        <button id="endBtn">End Game</button>
+      </div>
+
+      <p id="revealDisplay">Reveals: <span id="revealCount">0</span></p>
+      <button id="revealBtn">Reveal Sequence</button>
+      <p id="levelUpMsg"></p>
+    </div>
+  </div>
+
+  <!-- Sound FX & Music -->
+  <audio id="sfx-correct" src="correct.mp3" preload="auto"></audio>
+  <audio id="sfx-wrong" src="wrong.mp3" preload="auto"></audio>
+  <audio id="sfx-levelup" src="levelup.mp3" preload="auto"></audio>
+  <audio id="beat1" src="beat1.mp3" preload="auto"></audio>
+  <audio id="beat2" src="beat2.mp3" preload="auto"></audio>
+  <audio id="beat3" src="beat3.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
